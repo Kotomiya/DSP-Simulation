@@ -10,7 +10,8 @@ carrier=np.cos(2*np.pi*freq*t)
 freq2=5
 base=np.cos(2*np.pi*freq2*t)
 
-sig = (1+base)*carrier
+m=1
+sig = (1+m*base)*carrier
 FFTsig = np.fft.fft(sig)/fs
 FFTfreq = np.fft.fftfreq(fs, T)
 
